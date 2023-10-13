@@ -1,4 +1,5 @@
 {
+    
     "name": "faraztanveer/multi-db",
     "description": "Laravel package offering utility functions for seamless management and operations across multiple databases.",
     "type": "library",
