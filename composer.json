@@ -2,6 +2,7 @@
     "name": "faraztanveer/multi-db",
     "description": "Laravel package offering utility functions for seamless management and operations across multiple databases.",
     "type": "library",
+    "license": "MIT",
     "require": {
         "php": "^7.3|^8.0",
         "illuminate/support": "^8.0"
