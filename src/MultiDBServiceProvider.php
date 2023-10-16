@@ -11,7 +11,7 @@ class MultiDbServiceProvider extends ServiceProvider
      */
     public function register() 
     {
-        $this->app->singleton('database-shifter', function ($app) {
+        $this->app->singleton('multidb', function ($app) {
             return new Database\DatabaseShifter($app['config'], $app['db']);
         });
     }
