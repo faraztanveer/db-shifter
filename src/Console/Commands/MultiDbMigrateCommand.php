@@ -20,15 +20,15 @@ class MultiDbMigrateCommand extends Command
     public function handle()
     {
         // Gather options
-        $path = $this->option('path') ?? null;
-        $database = $this->option('database') ?? null;
-        $host = $this->option('host') ?? null;
-        $username = $this->option('username') ?? null;
-        $password = $this->option('password') ?? null;
-        $port = $this->option('port') ?? null;
+        $path = $this->option('path');
+        $database = $this->option('database');
+        $host = $this->option('host');
+        $username = $this->option('username');
+        $password = $this->option('password');
+        $port = $this->option('port');
 
         $db = app('multidb');
-        $db->shift( $database,  $host, $username, $password, $port);
+        $db->shift($database, $host, $username, $password, $port);
 
         // Migrate using the dynamic connection
         $this->call('migrate', [
