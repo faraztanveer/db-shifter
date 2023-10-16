@@ -33,10 +33,9 @@ class MultiDbMigrateCommand extends Command
         // Migrate using the dynamic connection
         $this->call('migrate', [
             '--path' => $path,
-            '--database' => 'dynamic'
         ]);
         $db->setDefaultDb();
-        
+
         $this->info("Migrations have been run for $database");
     }
 }
