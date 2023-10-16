@@ -6,6 +6,20 @@ use Illuminate\Support\ServiceProvider;
 
 class MultiDbServiceProvider extends ServiceProvider
 {
+
+
+
+    /**
+     * Bootstrap any package services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        $this->registerCommands();
+    }
+
+
     /**
      * Register any package services.
      *
