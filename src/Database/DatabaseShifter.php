@@ -4,6 +4,7 @@ namespace MultiDB\Database;
 
 use Illuminate\Contracts\Config\Repository as Config;
 use Illuminate\Database\DatabaseManager;
+use DB;
 
 class DatabaseShifter
 {
@@ -42,4 +43,26 @@ class DatabaseShifter
 
         $this->db->purge('mysql');
     }
+
+
+
+    public function setDefaultDb(): void
+    {
+        $this->config->set('database.connections.mysql.database', env('DB_DATABASE'));
+        $this->config->set('database.connections.mysql.host', env('DB_HOST'));
+        $this->config->set('database.connections.mysql.username', env('DB_USERNAME'));
+        $this->config->set('database.connections.mysql.password', env('DB_PASSWORD'));
+        $this->config->set('database.connections.mysql.port', env('DB_PORT'));
+
+        $this->db->purge('mysql');
+    }
+
+    public function currentDb()
+    {
+        $database = DB::connection()->getDatabaseName();
+
+        return $database;
+    }
+
+    
 }
