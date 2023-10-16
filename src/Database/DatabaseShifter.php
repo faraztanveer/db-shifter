@@ -33,7 +33,7 @@ class DatabaseShifter
      * @param string $port
      * @return void
      */
-    public function shift(string $database, string $host = '127.0.0.1', string $username = 'root', string $password = null, string $port = '3306'): void
+    public function shift($database,  $host = '127.0.0.1',  $username = 'root',  $password = null,  $port = '3306'): void
     {
         $this->config->set('database.connections.mysql.database', $database);
         $this->config->set('database.connections.mysql.host', $host);
@@ -63,6 +63,4 @@ class DatabaseShifter
 
         return $database;
     }
-
-    
 }

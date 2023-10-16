@@ -8,12 +8,12 @@ use Illuminate\Support\Facades\DB;
 class MultiDbMigrateCommand extends Command
 {
     protected $signature = 'multidb:migrate 
-                            {--path="" : The path to the migrations directory}
-                            {--database="" : The database name}
-                            {--host="" : The database host}
-                            {--username="" : The database username}
-                            {--password="" : The database password}
-                            {--port="" : The database port}';
+                            {--path= : The path to the migrations directory}
+                            {--database= : The database name}
+                            {--host= : The database host}
+                            {--username= : The database username}
+                            {--password= : The database password}
+                            {--port= : The database port}';
 
     protected $description = 'Run migrations for a specific database';
 
