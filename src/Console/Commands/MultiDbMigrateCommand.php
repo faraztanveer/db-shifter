@@ -10,10 +10,10 @@ class MultiDbMigrateCommand extends Command
     protected $signature = 'multidb:migrate 
                             {--path= : The path to the migrations directory}
                             {--database= : The database name}
-                            {--host= : The database host}
-                            {--username= : The database username}
+                            {--host=127.0.0.1 : The database host}
+                            {--username=root : The database username}
                             {--password= : The database password}
-                            {--port= : The database port}';
+                            {--port=3306 : The database port}';
 
     protected $description = 'Run migrations for a specific database';
 
