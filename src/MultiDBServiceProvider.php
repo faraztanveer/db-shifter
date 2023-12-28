@@ -4,7 +4,7 @@ namespace MultiDB;
 
 use Illuminate\Support\ServiceProvider;
 
-class MultiDbServiceProvider extends ServiceProvider
+class MultiDBServiceProvider extends ServiceProvider
 {
 
 

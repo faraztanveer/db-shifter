@@ -16,7 +16,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MultiDB\\MultiDbServiceProvider"
+              "MultiDBServiceProvider"
             ]
         }
     }
