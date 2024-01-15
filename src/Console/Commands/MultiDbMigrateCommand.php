@@ -13,7 +13,8 @@ class MultiDbMigrateCommand extends Command
                             {--host=127.0.0.1 : The database host}
                             {--username=root : The database username}
                             {--password= : The database password}
-                            {--port=3306 : The database port}';
+                            {--port=3306 : The database port}
+                            {--force}';
 
     protected $description = 'Run migrations for a specific database';
 
@@ -26,14 +27,16 @@ class MultiDbMigrateCommand extends Command
         $username = $this->option('username');
         $password = $this->option('password');
         $port = $this->option('port');
-
+        $force = $this->option('force');
         $db = app('multidb');
         $db->shift($database, $host, $username, $password, $port);
 
         // Migrate using the dynamic connection
-        $this->call('migrate', [
+        $options = [
             '--path' => $path,
-        ]);
+        ];
+        $options['--force'] = true;
+        $this->call('migrate', $options);
         $db->setDefaultDb();
 
         $this->info("Migrations have been run for $database");
