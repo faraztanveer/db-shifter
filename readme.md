@@ -103,4 +103,4 @@ This package is licensed under the MIT License. For more information, refer to t
 
 Contributions are welcome! Feel free to submit issues, suggestions, or pull requests to improve this package.
 
-**GitHub Repository:** [Link to repository](https://github.com/faraztanveer/db-shifter)
+**GitHub Repository:** [DB Shifter](https://github.com/faraztanveer/db-shifter)
